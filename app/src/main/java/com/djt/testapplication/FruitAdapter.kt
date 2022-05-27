@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -29,6 +30,8 @@ class FruitAdapter(
                 holder.name.text=fruititems.fruits
                 holder.price.text=fruititems.price
                 holder.color.text=fruititems.color
+                holder.image.setImageResource(fruititems.image)
+
                 if(from.equals("home")) {
                     holder.add.visibility=View.VISIBLE
                 }
@@ -55,6 +58,7 @@ class FruitAdapter(
         var add: TextView = view.findViewById(R.id.textadd)
         var price: TextView = view.findViewById(R.id.textprice)
         var color: TextView = view.findViewById(R.id.textcolor)
+        var image: ImageView = view.findViewById(R.id.imagev)
 
     }
     fun setListener(listener: CartListener) {
